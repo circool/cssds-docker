@@ -5,16 +5,24 @@ Counter-Strike: Source dedicated server as docker image
 ## Usage
 
 
-### Run
+### Run container
 ```bash
-docker run -ti circool/cssds-docker /bin/bash
+docker run -ti circool/cssds-docker
 ```
 
 
-### Start
+### Starting
+Gameserver will run automatic, for manual start use
 ```bash
-cd /home/steam/css && ./srcds_run -console -game cstrike +map de_dust2 +maxplayers 32 +ip $SERVER_IP
+cd /home/steam/css && ./srcds_run -console -game cstrike +map de_dust2 +maxplayers 32 +ip <ip_address>
 ```
+
+or
+
+```bash
+./start_gameserver
+```
+
 
 ### Update
 ```bash
