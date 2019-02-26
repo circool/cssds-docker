@@ -9,7 +9,7 @@ RUN ./steamcmd.sh +login anonymous +force_install_dir ./css +app_update 232330 v
 RUN ln -s /home/steam/linux32/ /home/steam/.steam/sdk32
 
 # Create start_gameserver script
-echo -e "cd ~/css \n./srcds_run -console -game cstrike +map de_dust2 +maxplayers 32" > ./start_gameserver && chmod +x ./start_gameserver 
+RUN echo -e "cd ~/css \n./srcds_run -console -game cstrike +map de_dust2 +maxplayers 32" > ./start_gameserver && chmod +x ./start_gameserver 
 
 # Declare expose ports
 EXPOSE 27015/udp
